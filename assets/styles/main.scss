@@ -1,0 +1,147 @@
+@import './variables.scss';
+@import '~bulma';
+
+
+html {
+    background-color: $mainBackground;
+}
+
+body {
+    margin: 10px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.button {
+    background: transparent;
+    border: 2px solid $primary;
+    color: $white;
+
+    &.is-secondary-border {
+        border: 2px solid $secondary !important;
+    }
+    &.is-secondary-border:hover {
+        color: $primary;
+        border: 2px solid $primary;
+    }
+
+    &.is-primary-border {
+        border: 2px solid $primary !important;
+    }
+    &.is-primary-border:hover {
+        color: $primary;
+        border: 2px solid $primary;
+    }
+
+    &.is-third-border {
+        border: 2px solid $third !important;
+    }
+    &.is-third-border:hover {
+        color: $fourth;
+        border: 2px solid $third;
+    }
+
+    &.is-fourth-border {
+        border: 2px solid $fourth !important;
+    }
+    &.is-fourth-border:hover {
+        color: $fourth;
+        border: 2px solid $fourth;
+    }
+}
+
+.button:focus {
+    color: $primary;
+    border: 2px solid $primary;
+}
+
+.is-custom-input {
+    width: 50vw;
+    max-width: 15rem;
+    height: 2.4rem;
+    border: 2px solid $primary;
+    border-radius: 10px;
+    background-color: transparent;
+    color: $secondary;
+    font-size: 17px;
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+.gameWrapper {
+    height: 120vh;
+}
+p {
+    font-size: 20px;
+}
+
+.is-share-text {
+    cursor: pointer;
+}
+
+a.dropdown-item {
+    padding-right: 1rem;
+
+}
+
+.dropdown-menu {
+    min-width: 7rem;
+}
+
+.modal-content {
+    overflow: hidden;
+}
+
+
+//helpers
+.is-pointer {
+    cursor: pointer;
+}
+
+.is-primary {
+    color: $primary;
+}
+.is-secondary {
+    color: $secondary;
+}
+
+.is-third {
+    color: $third
+}
+
+.is-fourth {
+    color: $fourth
+}
+
+.is-white {
+    color: $white;
+}
+.is-large {
+    font-size: 100px;
+}
+.mt-7 {
+    margin-top: 4rem !important;
+}
+.mb-negative-1 {
+    margin-bottom: -0.25rem;
+}
+.mb-negative-2 {
+    margin-bottom: -0.5rem;
+}
+
+.mt-negative-1 {
+    margin-top: -0.25rem !important;
+}
+.mt-negative-2 {
+    margin-top: -0.5rem !important;
+}
+.mt-negative-3 {
+    margin-top: -0.75rem !important;
+}
+.mt-negative-4 {
+    margin-top: -1rem !important;
+}
+.mt-negative-5 {
+    margin-top: -1.5rem !important;
+}
