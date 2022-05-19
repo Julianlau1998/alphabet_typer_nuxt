@@ -1,10 +1,6 @@
 import axios from 'axios'
 
-let host = 'https://api.alphabet-typer.com'
-console.log(process.env.environment)
-if (process.env.environment === 'DEV') {
-  host = ''
-}
+const host = 'https://api.alphabet-typer.com'
 
 axios.defaults.headers.common = {
   'x-api-key': 'valid-key'
