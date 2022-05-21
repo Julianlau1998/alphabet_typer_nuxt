@@ -1,16 +1,15 @@
-FROM node:16-alpine as build-stage
+FROM node:14
 
-ENV TZ=UTC+0
+WORKDIR /usr/src/app
 
-RUN mkdir -p /app
-WORKDIR /app
-COPY . /app
+COPY . ./
+RUN yarn
 
-RUN yarn install --non-interactive --no-progress
+EXPOSE 8080
+
+ENV HOST=0.0.0.0
+ENV PORT=8080
+
 RUN yarn build
 
-ENV NUXT_HOST=0.0.0.0
-ENV NUXT_PORT=80
-EXPOSE 80
-
-CMD ["yarn", "start"]
+CMD [ "yarn", "start" ]
