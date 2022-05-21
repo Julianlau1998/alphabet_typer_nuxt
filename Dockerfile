@@ -10,7 +10,7 @@ RUN yarn install --non-interactive --no-progress
 RUN yarn build
 
 ENV NUXT_HOST=0.0.0.0
-ENV NUXT_PORT=5000
+ENV NUXT_PORT=8080
 
-EXPOSE 5000
+EXPOSE 8080
 CMD ["yarn", "start"]
