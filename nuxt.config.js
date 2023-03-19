@@ -9,7 +9,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Type the Alphabet as fast as you can. Copmpete with others and type the alphabet faster than everyone else.' },
+      { hid: 'description', name: 'description', content: 'Improve your typing speed with \'Type the Alphabet\' - the ultimate online game that challenges you to type the alphabet as fast as you can. Compete with friends and climb the leaderboard!' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -110,7 +110,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
-  /* proxy: {
+  /*   proxy: {
     // Simple proxy
     '/api/': {
       target: 'http://192.168.178.87:8081'

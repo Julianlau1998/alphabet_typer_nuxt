@@ -1,11 +1,11 @@
 <template>
   <div class="gameWrapper">
-    <h1
+    <h2
       class="heading is-primary"
       :class="letterPosition >= 26 ? 'is-size-1' : 'is-large'"
     >
       {{ alphabet[letterPosition] }}
-    </h1>
+    </h2>
     <input
       ref="letterInput"
       class="is-custom-input"
@@ -27,14 +27,14 @@
     </button>
 
     <p v-if="!records.length" class="mt-6 is-white px-3">
-      How fast can you type the letters of the alphabet?
+      How fast can you type the alphabet?
       Just start with an 'A' and the timer will start to.
     </p>
     <div class="columns is-justify-content-center has-text-start mt-5">
       <div v-if="records.length" class="column is-3 mt-5 is-white">
-        <h1 class="heading is-size-4 is-fourth is-italic">
+        <h3 class="heading is-size-4 is-fourth is-italic">
           Your <br> Records:
-        </h1>
+        </h3>
         <p
           v-for="(record, recordsIndex) in records"
           :key="recordsIndex"
@@ -47,9 +47,9 @@
       <div class="column is-3 mt-5 is-white">
         <div class="columns is-justify-content-flex-end mb-0">
           <div class="column is-8">
-            <h1 class="heading is-size-4 is-third is-italic mb-negative-2">
+            <h3 class="heading is-size-4 is-third is-italic mb-negative-2">
               All <br> Records:
-            </h1>
+            </h3>
           </div>
           <div class="column is-2">
             <Dropdown
@@ -151,12 +151,14 @@ export default {
       }
     }
   },
+  created () {
+    this.getAll({ limit: this.limit, filter: this.filter, offset: this.offset })
+  },
   mounted () {
+    this.getRecords(false)
     if (navigator.share !== undefined) {
       this.shareAvailable = true
     }
-    this.getRecords(false)
-    this.getAll({ limit: this.limit, filter: this.filter, offset: this.offset })
   },
   methods: {
     ...mapActions({

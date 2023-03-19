@@ -93,6 +93,11 @@ a.dropdown-item {
     overflow: hidden;
 }
 
+.is-text-wrapper {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
 
 //helpers
 .is-pointer {
@@ -115,7 +120,7 @@ a.dropdown-item {
 }
 
 .is-white {
-    color: $white;
+    color: $white !important;
 }
 .is-large {
     font-size: 100px;
