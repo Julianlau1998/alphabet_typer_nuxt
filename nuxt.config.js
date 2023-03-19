@@ -9,7 +9,6 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Improve your typing speed with \'Type the Alphabet\' - the ultimate online game that challenges you to type the alphabet as fast as you can. Compete with friends and climb the leaderboard!' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [

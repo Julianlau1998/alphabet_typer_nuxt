@@ -11,7 +11,7 @@
 
     <div class="is-text-wrapper">
       <h1 class="heading is-size-1 is-size-3-mobile is-secondary mt-5 mb-6">
-        Welcome to Type the Alphabet - The Ultimate Typing Speed Challenge
+        Type the Alphabet - The Ultimate Typing Speed Challenge
       </h1>
 
       <h2 class="heading is-size-3 is-size-3-mobile mt-5 is-white mt-6">
@@ -19,7 +19,7 @@
       </h2>
 
       <p class="text mt-0 is-white is-italic">
-        Introducing 'Type the Alphabet,' the addictive and exciting web app that tests your typing speed and accuracy! Designed for both beginners and advanced typists, our game provides endless fun and an opportunity to improve your typing skills. Compete with friends, family, or other players from around the world to see who can type the alphabet fastest!
+        Introducing 'Type the Alphabet' The Ultimate Typing Speed Challenge that tests your typing speed and accuracy! Designed for both beginners and advanced typists, our game provides endless fun and an opportunity to improve your typing skills. Compete with friends, family, or other players from around the world to see who can type the alphabet fastest!
       </p>
 
       <h2 class="heading is-size-3 is-size-3-mobile mt-5 is-white mt-6">
