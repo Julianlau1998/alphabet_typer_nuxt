@@ -1,5 +1,5 @@
 <template>
-  <div class="gameWrapper">
+  <div class="gameWrapper mb-8">
     <h2
       class="heading is-primary"
       :class="letterPosition >= 26 ? 'is-size-1' : 'is-large'"
@@ -83,6 +83,8 @@
       Share this App
       <i class="fas fa-share ml-4 is-secondary" />
     </button>
+
+    <br>
 
     <ShareModal
       v-if="showShareModal"
