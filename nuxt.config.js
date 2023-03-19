@@ -20,7 +20,7 @@ export default {
         src: 'https://kit.fontawesome.com/83948e47aa.js',
         crossorigin: 'anonymous'
       }
-    ],
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -63,19 +63,59 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
+      name: 'Type The Alphabet',
+      lang: 'en',
+      background_color: '#122933',
+      theme_color: '#122933',
+      icons: [{
+        src: 'static/icon.png',
+        size: '144x144',
+        type: 'image/png'
+      }, {
+        src: 'static/icon.png',
+        size: '128x128',
+        type: 'image/png'
+      }, {
+        src: 'static/icon.png',
+        size: '152x152',
+        type: 'image/png'
+      }, {
+        src: 'static/icon.png',
+        size: '180x180',
+        type: 'image/png'
+      }, {
+        src: 'static/icon.png',
+        size: '192x192',
+        type: 'image/png'
+      }, {
+        src: 'static/icon.png',
+        size: '256x256',
+        type: 'image/png'
+      }
+      ]
+    },
+    icon: {
+      src: 'static/icon.png',
+      fileName: 'icon.png'
+    },
+    meta: {
+      appleStatusBarStyle: '#2a343c',
+      mobileApp: true,
+      mobileAppIOS: true,
+      theme_color: '#2a343c',
+      src: 'static/icon.png'
     }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
-  proxy: {
+  /* proxy: {
     // Simple proxy
     '/api/': {
       target: 'http://192.168.178.87:8081'
     }
-  },
+  }, */
   env: {
     environment: process.env.environment || 'DEV'
   }
