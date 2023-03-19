@@ -58,21 +58,23 @@
             />
           </div>
         </div>
-        <p
-          v-for="(record, fetchedRecordsIndex) in fetchedRecords"
-          :key="fetchedRecordsIndex"
-          class="text"
-        >
-          {{ `${fetchedRecordsIndex+1}. ${record.username}: ${record.record}s` }}
-        </p>
-        <p
-          v-if="loadMoreAvailable && fetchedRecords.length < 100"
-          class="is-primary is-pointer mb-2 mt-2"
-          @click="loadMore"
-        >
-          Load More
-          <i class="fas fa-angle-down" />
-        </p>
+        <span>
+          <p
+            v-for="(record, fetchedRecordsIndex) in fetchedRecords"
+            :key="fetchedRecordsIndex"
+            class="text"
+          >
+            {{ `${fetchedRecordsIndex+1}. ${record.username}: ${record.record}s` }}
+          </p>
+          <p
+            v-if="loadMoreAvailable && fetchedRecords.length < 100"
+            class="is-primary is-pointer mb-2 mt-2"
+            @click="loadMore"
+          >
+            Load More
+            <i class="fas fa-angle-down" />
+          </p>
+        </span>
       </div>
     </div>
     <button
