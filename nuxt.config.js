@@ -1,6 +1,7 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  ssr: true,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -33,7 +34,9 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
+    ['@nuxtjs/eslint-module', {
+      fix: true
+    }]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -63,16 +66,11 @@ export default {
   },
   proxy: {
     // Simple proxy
-    "/api/": {
-      target: "http://192.168.178.87:8081"
+    '/api/': {
+      target: 'http://192.168.178.87:8081'
     }
   },
   env: {
     environment: process.env.environment || 'DEV'
-  },
-  buildModules: [
-    ['@nuxtjs/eslint-module', {
-      fix: true
-    }]
-  ]
+  }
 }
