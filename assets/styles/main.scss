@@ -154,3 +154,9 @@ a.dropdown-item {
 .mb-8 {
   margin-bottom: 180rem !important;
 }
+
+.text {
+  &.is-left-aligned {
+    text-align: left;
+  }
+}

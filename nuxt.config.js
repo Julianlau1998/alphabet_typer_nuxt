@@ -13,7 +13,7 @@ export default {
       {
         hid: 'description-main',
         name: 'description',
-        content: 'Improve your typing speed with \'Type the Alphabet\' - the ultimate online game that challenges you to type the alphabet as fast as you can. Compete with friends and climb the leaderboard!'
+        content: 'Type the Alphabet - the ultimate online game that challenges you to type the alphabet as fast as you can. Compete with friends and climb the leaderboard!'
       },
       {
         hid: 'keywords-main',
