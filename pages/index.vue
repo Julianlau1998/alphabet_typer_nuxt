@@ -9,7 +9,6 @@
     </p>
     <Game />
     <br>
-
     <div class="is-text-wrapper mt-100">
       <h1 class="heading is-size-3 is-size-3-mobile is-secondary mt-5 mb-6">
         Type the Alphabet - The Ultimate Typing Speed Challenge
@@ -94,6 +93,16 @@
         <br>
         Don't wait any longer - start your 'Type the Alphabet' journey today and become the ultimate typing champion!
       </p>
+
+      <h2 class="heading is-size-4 is-size-4-mobile mt-5 is-white mt-6 mb-3">
+        Share
+      </h2>
+
+      <Social
+        :facebook-url="facebookURL"
+        :twitter-url="twitterURL"
+        :mail-url="mailURL"
+      />
     </div>
     <div class="my-6">
       <NuxtLink to="/info" class="mx-3">
@@ -127,10 +136,13 @@
 
 <script>
 import Game from '@/components/game/Game.vue'
+import Social from '~/components/Social'
+
 export default {
   name: 'Home',
   components: {
-    Game
+    Game,
+    Social
   },
   head () {
     return {
@@ -147,6 +159,17 @@ export default {
         { hid: 'twitter:description_og_article', name: 'twitter:description', content: 'How fast can you type the alphabet?' },
         { hid: 'twitter:image_og_article', name: 'twitter:image', content: '/static/icon.png' }
       ]
+    }
+  },
+  computed: {
+    twitterURL () {
+      return 'https://twitter.com/intent/tweet?text=Type The Alphabet - How fast can you type the alphabet&url=alphabet-typer.com&hashtags=#TypeTheAlphabet'
+    },
+    facebookURL () {
+      return 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Falphabet-typer.comF2&amp;src=sdkpreparse'
+    },
+    mailURL () {
+      return 'mailto:?to=&body=https://alphabet-typer.com&subject=Type The Alphabet'
     }
   },
   mounted () {
