@@ -9,7 +9,17 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      {
+        hid: 'description-main',
+        name: 'description',
+        content: 'Improve your typing speed with \'Type the Alphabet\' - the ultimate online game that challenges you to type the alphabet as fast as you can. Compete with friends and climb the leaderboard!'
+      },
+      {
+        hid: 'keywords-main',
+        name: 'keywords',
+        content: 'Type the Alphabet, Typing speed challenge, Alphabet typing game, Alphabet Typer, Online typing competition, Typing leaderboard, Typing speed test, Julian Lau'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

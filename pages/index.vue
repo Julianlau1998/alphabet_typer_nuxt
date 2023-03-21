@@ -8,13 +8,14 @@
       How fast can you type?
     </p>
     <Game />
+    <br>
 
-    <div class="is-text-wrapper">
-      <h1 class="heading is-size-1 is-size-3-mobile is-secondary mt-5 mb-6">
+    <div class="is-text-wrapper mt-100">
+      <h1 class="heading is-size-3 is-size-3-mobile is-secondary mt-5 mb-6">
         Type the Alphabet - The Ultimate Typing Speed Challenge
       </h1>
 
-      <h2 class="heading is-size-3 is-size-3-mobile mt-5 is-white mt-6">
+      <h2 class="heading is-size-4 is-size-4-mobile mt-5 is-white mt-6">
         How Fast Can You Type the Alphabet?
       </h2>
 
@@ -22,7 +23,7 @@
         Introducing 'Type the Alphabet' The Ultimate Typing Speed Challenge that tests your typing speed and accuracy! Designed for both beginners and advanced typists, our game provides endless fun and an opportunity to improve your typing skills. Compete with friends, family, or other players from around the world to see who can type the alphabet fastest!
       </p>
 
-      <h2 class="heading is-size-3 is-size-3-mobile mt-5 is-white mt-6">
+      <h2 class="heading is-size-4 is-size-4-mobile mt-5 is-white mt-6">
         How to Play Type the Alphabet
       </h2>
 
@@ -31,7 +32,7 @@
         You can restart the game by clicking 'Enter'.
       </p>
 
-      <h2 class="heading is-size-3 is-size-3-mobile mt-5 is-white mt-6">
+      <h2 class="heading is-size-4 is-size-4-mobile mt-5 is-white mt-6">
         Global Leaderboard and Achievements
       </h2>
 
@@ -39,7 +40,7 @@
         Think you've got what it takes to become the world's fastest typist? Join our global leaderboard by setting an impressive time and see how you rank against other players. Keep practicing and watch your name climb the ranks!
       </p>
 
-      <h2 class="heading is-size-3 is-size-3-mobile mt-5 is-white mt-6">
+      <h2 class="heading is-size-4 is-size-4-mobile mt-5 is-white mt-6">
         Tips to Improve Your Typing Speed
       </h2>
 
@@ -52,15 +53,29 @@
         With dedication and practice, you'll see your typing speed soar in no time!
       </p>
 
-      <h2 class="heading is-size-3 is-size-3-mobile mt-5 is-white mt-6">
+      <h2 class="heading is-size-4 is-size-4-mobile mt-5 is-white mt-6">
         Contact Us and Stay Connected
       </h2>
 
-      <p class="text mt-0 is-white is-italic">
+      <p class="text mt-0 is-white is-italic mb-6">
         We love hearing from our players! If you have any questions, feedback, or suggestions, feel free to reach out to us <a href="mailto:jlauapps@gmail.com?subject=Type The Alphabet">here</a>. Let's keep the typing community growing and thriving together!
         <br>
         Don't wait any longer - start your 'Type the Alphabet' journey today and become the ultimate typing champion!
       </p>
+    </div>
+    <div class="my-6">
+      <NuxtLink to="/info" class="mx-3">
+        Info
+      </NuxtLink>
+      <NuxtLink to="/privacy" class="mx-3">
+        Privacy
+      </NuxtLink>
+      <NuxtLink to="/termsConditions" class="mx-3">
+        Terms
+      </NuxtLink>
+      <a href="https://jlapps.netlify.app" class="mx-3">
+        Contact
+      </a>
     </div>
   </div>
 </template>
@@ -76,16 +91,6 @@ export default {
     return {
       title: 'Type The Alphabet',
       meta: [
-        {
-          hid: 'description-main',
-          name: 'description',
-          content: 'Improve your typing speed with \'Type the Alphabet\' - the ultimate online game that challenges you to type the alphabet as fast as you can. Compete with friends and climb the leaderboard!'
-        },
-        {
-          hid: 'keywords-main',
-          name: 'keywords',
-          content: 'Type the Alphabet, Typing speed challenge, Alphabet typing game, Alphabet Typer, Online typing competition, Typing leaderboard, Typing speed test, Julian Lau'
-        },
         { hid: 'og:title_og_article', property: 'og:title', content: 'Type The Alphabet' },
         { hid: 'og:url_og_article', property: 'og:url', content: 'https://app.alphabet-typer.com' },
         { hid: 'og:description_og_article', property: 'og:description', content: 'How fast can you type the alphabet?' },
