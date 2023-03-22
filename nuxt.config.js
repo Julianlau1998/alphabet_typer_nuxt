@@ -74,8 +74,8 @@ export default {
     manifest: {
       name: 'Type The Alphabet',
       lang: 'en',
-      background_color: '#122933',
-      theme_color: '#122933',
+      background_color: '#2c3e50',
+      theme_color: '#2c3e50',
       icons: [{
         src: 'static/icon.png',
         size: '144x144',
