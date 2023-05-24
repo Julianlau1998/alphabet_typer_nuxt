@@ -1,5 +1,5 @@
 <template>
-  <div class="gameWrapper mb-8">
+  <div class="gameWrapper">
     <h2
       class="heading is-primary"
       :class="letterPosition >= 26 ? 'is-size-1' : 'is-large'"
@@ -26,57 +26,8 @@
       <i class="fas fa-eraser ml-2" @click="reset()" />
     </button>
 
-    <p v-if="!records.length" class="mt-6 is-white px-3">
-      How fast can you type the alphabet?
-      Just start with an 'A' and the timer will start to.
-    </p>
-    <div class="columns is-justify-content-center has-text-start mt-5">
-      <div v-if="records.length" class="column is-3 mt-5 is-white">
-        <h3 class="heading is-size-4 is-fourth is-italic">
-          Your <br> Records:
-        </h3>
-        <p
-          v-for="(record, recordsIndex) in records"
-          :key="recordsIndex"
-          class="text"
-        >
-          {{ `${recordsIndex+1}. ${record}s` }}
-        </p>
-      </div>
+    <Records :records="records" @setFilter="setFilter" />
 
-      <div class="column is-3 mt-5 is-white">
-        <div class="columns is-justify-content-flex-end mb-0">
-          <div class="column is-8">
-            <h3 class="heading is-size-4 is-third is-italic mb-negative-2">
-              All <br> Records:
-            </h3>
-          </div>
-          <div class="column is-2">
-            <Dropdown
-              :options="recordOptions"
-              @setFilter="setFilter"
-            />
-          </div>
-        </div>
-        <span>
-          <p
-            v-for="(record, fetchedRecordsIndex) in fetchedRecords"
-            :key="fetchedRecordsIndex"
-            class="text"
-          >
-            {{ `${fetchedRecordsIndex+1}. ${record.username}: ${record.record}s` }}
-          </p>
-          <p
-            v-if="loadMoreAvailable && fetchedRecords.length < 100"
-            class="is-primary is-pointer mb-2 mt-2"
-            @click="loadMore"
-          >
-            Load More
-            <i class="fas fa-angle-down" />
-          </p>
-        </span>
-      </div>
-    </div>
     <button
       v-if="shareAvailable"
       class="button is-fourth-border px-5 py-5 mt-6 mb-6"
@@ -85,9 +36,7 @@
       Share this App
       <i class="fas fa-share ml-4 is-secondary" />
     </button>
-
     <br>
-
     <ShareModal
       v-if="showShareModal"
       :time="timer.toFixed(2)"
@@ -97,13 +46,14 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
+import { mapActions } from 'vuex'
 import ShareModal from '@/components/game/ShareModal.vue'
-import Dropdown from '@/components/helpers/Dropdown.vue'
+import Records from '~/components/records/Records'
+
 export default {
   components: {
     ShareModal,
-    Dropdown
+    Records
   },
   data () {
     return {
@@ -116,31 +66,13 @@ export default {
       started: false,
       stopTimer: false,
       recordsSet: false,
-      records: [],
       showShareModal: false,
-      limit: '10',
-      recordOptions: [
-        { name: 'All Time', value: 0 },
-        { name: 'Last Day', value: 1 },
-        { name: 'Last Week', value: 7 },
-        { name: 'Last Month', value: 30 },
-        { name: 'Last Year', value: 365 }
-      ],
       filter: '',
       shareAvailable: false,
-      offset: 0
+      records: []
     }
   },
   computed: {
-    ...mapState([
-      'recordModule'
-    ]),
-    fetchedRecords () {
-      return this.recordModule.records.data
-    },
-    loadMoreAvailable () {
-      return this.recordModule.records.load_more
-    },
     username () {
       return this.$store.state.username
     },
@@ -154,9 +86,6 @@ export default {
         this.letterPosition++
       }
     }
-  },
-  created () {
-    this.getAll({ limit: this.limit, filter: this.filter, offset: this.offset })
   },
   mounted () {
     this.getRecords(false)
@@ -210,10 +139,25 @@ export default {
         behavior: 'smooth'
       })
     },
+    closeShareModal () {
+      this.getAll({ limit: this.limit, filter: this.filter })
+      this.showShareModal = false
+      this.$refs.letterInput.focus()
+    },
+    recommend () {
+      navigator.share({
+        title: 'How fast can You type the alphabet? Test your Typing skills with Alphabet Typer',
+        text: !this.iOS ? 'https://play.google.com/store/apps/details?id=com.alphabet_typer.app' : 'https://apps.apple.com/us/app/alphabet-typer/id1610788763'
+      })
+    },
     getRecords (editRecords) {
       this.records = JSON.parse(localStorage.getItem('records'))
       if (this.records === undefined || this.records === null) { this.records = [] }
       if (editRecords) { this.editRecords() }
+    },
+    storeRecords () {
+      localStorage.setItem('records', JSON.stringify(this.records))
+      this.showShareModal = true
     },
     editRecords () {
       if (this.records.length < 5) {
@@ -230,29 +174,8 @@ export default {
       this.records = this.records.sort(function (a, b) { return a - b })
       this.storeRecords(this.records)
     },
-    storeRecords () {
-      localStorage.setItem('records', JSON.stringify(this.records))
-      this.showShareModal = true
-    },
     setFilter (filter) {
       this.filter = filter
-      this.offset = 0
-      this.getAll({ limit: this.limit, filter })
-    },
-    loadMore () {
-      this.offset += 10
-      this.getAll({ limit: this.limit, filter: this.filter, offset: this.offset })
-    },
-    closeShareModal () {
-      this.getAll({ limit: this.limit, filter: this.filter })
-      this.showShareModal = false
-      this.$refs.letterInput.focus()
-    },
-    recommend () {
-      navigator.share({
-        title: 'How fast can You type the alphabet? Test your Typing skills with Alphabet Typer',
-        text: !this.iOS ? 'https://play.google.com/store/apps/details?id=com.alphabet_typer.app' : 'https://apps.apple.com/us/app/alphabet-typer/id1610788763'
-      })
     }
   }
 }
