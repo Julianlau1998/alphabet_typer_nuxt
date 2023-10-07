@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const host = 'https://api.alphabet-typer.com'
+const host = 'https://alphabet-typer-backend-zs7wieq6lq-ew.a.run.app/'
 
 axios.defaults.headers.common = {
   'x-api-key': 'valid-key'
