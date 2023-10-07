@@ -28,6 +28,12 @@ export default {
       {
         src: 'https://kit.fontawesome.com/83948e47aa.js',
         crossorigin: 'anonymous'
+      },
+      {
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+        'data-ad-client': 'ca-pub-1006221991146598',
+        async: true,
+        crossorigin: 'anonymous'
       }
     ]
   },
