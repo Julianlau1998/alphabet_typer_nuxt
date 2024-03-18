@@ -2,7 +2,7 @@
   <div>
     <p v-if="!records.length" class="mt-6 is-white px-3">
       How fast can you type the alphabet?
-      Just start with an 'A' and the timer will start to.
+      Just start with an 'A' and the timer will start too.
     </p>
     <div class="columns is-justify-content-center has-text-start mt-5">
       <div v-if="records.length" class="column is-3 mt-5 is-white">
