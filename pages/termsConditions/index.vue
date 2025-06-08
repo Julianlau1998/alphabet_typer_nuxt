@@ -7,7 +7,7 @@
     <div class="text is-left-aligned">
       <p>Welcome to Type The Alphabet!</p>
 
-      <p>These terms and conditions outline the rules and regulations for the use of Julian Lau's Website, located at https://how-works.com/.</p>
+      <p>These terms and conditions outline the rules and regulations for the use of Julian Lau's Website, located at https://alphabet-typer.com/.</p>
 
       <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use Type The Alphabet if you do not agree to take all of the terms and conditions stated on this page.</p>
 
