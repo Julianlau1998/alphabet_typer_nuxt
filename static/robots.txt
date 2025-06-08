@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://alphabet-typer.com/sitemap.xml

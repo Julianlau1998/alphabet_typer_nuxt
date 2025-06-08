@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://alphabet-typer.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://alphabet-typer.com/alphabet-typing-test</loc>
+  </url>
+
+  <url>
+    <loc>https://alphabet-typer.com/type-the-alphabet</loc>
+  </url>
+
+  <url>
+    <loc>https://alphabet-typer.com/abc-typing-speed-test</loc>
+  </url>
+
+  <url>
+    <loc>https://alphabet-typer.com/learn</loc>
+  </url>
+
+  <url>
+    <loc>https://alphabet-typer.com/learn/how-to-play</loc>
+  </url>
+
+  <url>
+    <loc>https://alphabet-typer.com/learn/how-to-improve</loc>
+  </url>
+
+  <url>
+    <loc>https://alphabet-typer.com/learn/leaderboard</loc>
+  </url>
+
+  <url>
+    <loc>https://alphabet-typer.com/learn/typing-speed</loc>
+  </url>
+
+  <url>
+    <loc>https://alphabet-typer.com/learn/touch-typing</loc>
+  </url>
+
+</urlset>
