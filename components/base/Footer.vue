@@ -47,7 +47,7 @@
 
 <script>
 import Social from '~/components/Social'
-import Apps from '~/components/apps/apps.vue'
+import Apps from '~/components/apps/Apps.vue'
 
 export default {
   name: 'ContentComponent',
