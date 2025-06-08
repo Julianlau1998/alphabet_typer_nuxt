@@ -24,7 +24,7 @@ export default {
   },
   head () {
     return {
-      title: 'Type The Alphabet - Fun & Free Typing Game',
+      title: 'Type The Alphabet - Speed Typing Game & Global Leaderboard',
       meta: [
         { hid: 'og:title_og_article', property: 'og:title', content: 'Type The Alphabet' },
         { hid: 'og:url_og_article', property: 'og:url', content: 'https://alphabet-typer.com' },
@@ -36,6 +36,23 @@ export default {
         { hid: 'twitter:url_og_article', name: 'twitter:url', content: 'https://alphabet-typer.com' },
         { hid: 'twitter:description_og_article', name: 'twitter:description', content: 'Test how fast you can type the alphabet! Play Alphabet Typer — a free, fun, and fast-paced typing game to challenge your speed and accuracy.' },
         { hid: 'twitter:image_og_article', name: 'twitter:image', content: '/static/icon.png' }
+      ],
+      script: [
+        {
+          type: 'application/ld+json',
+          json: {
+            '@context': 'https://schema.org',
+            '@type': 'Game',
+            name: 'Type the Alphabet',
+            description: 'A fast-paced browser typing game where players race to type the alphabet as quickly as possible.',
+            url: 'https://alphabet-typer.com',
+            genre: 'Typing game',
+            playMode: 'SinglePlayer',
+            inLanguage: 'en',
+            isAccessibleForFree: true,
+            keywords: 'Type the Alphabet, Alphabet Typing Test, Alphabet Typer, abc typing test, abcd typing'
+          }
+        }
       ]
     }
   },
