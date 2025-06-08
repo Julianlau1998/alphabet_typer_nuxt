@@ -5,7 +5,7 @@
     </h1>
     <br>
     <p class="text mt-0 is-white is-italic mt-negative-5">
-      How fast can you type?
+      Test your typing skills
     </p>
     <Game />
     <Content />

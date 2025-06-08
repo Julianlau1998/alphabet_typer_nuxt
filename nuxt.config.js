@@ -5,7 +5,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'alphabet-typer',
+    title: 'Type The Alphabet - How fast can you type the alphabet?',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -13,12 +13,12 @@ export default {
       {
         hid: 'description-main',
         name: 'description',
-        content: 'Type the Alphabet - the ultimate online game that challenges you to type the alphabet as fast as you can. Compete with friends and climb the leaderboard!'
+        content: 'Test how fast you can type the alphabet! Play Alphabet Typer — a free, fun, and fast-paced typing game to challenge your speed and accuracy. Compete with friends and climb the leaderboard!'
       },
       {
         hid: 'keywords-main',
         name: 'keywords',
-        content: 'Type the Alphabet, Typing speed challenge, Alphabet typing game, Alphabet Typer, Online typing competition, Typing leaderboard, Typing speed test, Julian Lau'
+        content: 'Type the Alphabet, Alphabet Typing Test, Alphabet Typer, abc typing test, abcd typing, Typing speed challenge, Alphabet typing game, typing competition, Typing leaderboard, Typing speed test'
       }
     ],
     link: [

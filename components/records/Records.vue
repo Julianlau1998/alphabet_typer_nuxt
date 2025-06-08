@@ -6,9 +6,9 @@
     </p>
     <div class="columns is-justify-content-center has-text-start mt-5">
       <div v-if="records.length" class="column is-3 mt-5 is-white">
-        <h3 class="heading is-size-4 is-fourth is-italic">
+        <h4 class="heading is-size-4 is-fourth is-italic">
           Your <br> Records:
-        </h3>
+        </h4>
         <p
           v-for="(record, recordsIndex) in records"
           :key="recordsIndex"
@@ -21,9 +21,9 @@
       <div class="column is-3 mt-5 is-white">
         <div class="columns is-justify-content-flex-end mb-0 is-multiline">
           <div class="column is-12">
-            <h3 class="heading is-size-4 is-third is-italic mb-negative-2">
+            <h4 class="heading is-size-4 is-third is-italic mb-negative-2">
               Leaderboard:
-            </h3>
+            </h4>
           </div>
           <div class="column is-12 mb-1">
             <Dropdown
