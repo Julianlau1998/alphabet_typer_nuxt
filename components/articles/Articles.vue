@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1 v-if="!hideTitle" class="heading is-secondary is-italic is-size-2 mt-5">
+    <h2 v-if="!hideTitle" class="heading is-secondary is-italic is-size-2 mt-5">
       Articles
-    </h1>
+    </h2>
     <div
       v-for="(group, index) in groupedArticles"
       :key="index"

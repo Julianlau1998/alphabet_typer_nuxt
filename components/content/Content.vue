@@ -1,9 +1,9 @@
 <template>
   <div class="mt-8">
     <div class="is-text-wrapper mt-1">
-      <h1 class="heading is-size-3 is-size-3-mobile is-secondary mt-5 mb-6">
+      <h2 class="heading is-size-3 is-size-3-mobile is-secondary mt-5 mb-6">
         Type the Alphabet - Tips And Tricks
-      </h1>
+      </h2>
 
       <h2 class="heading is-size-4 is-size-4-mobile is-white mt-5">
         How to Play Type the Alphabet
@@ -21,6 +21,7 @@
       <p class="text is-left-aligned mt-0 is-white is-italic">
         Think you've got what it takes to become the world's fastest typist? Join our global leaderboard by setting an impressive time and see how you rank against other players. Keep practicing and watch your name climb the ranks!
       </p>
+      </h2>
     </div>
     <div class="home container">
       <div class="mt-6 ">
